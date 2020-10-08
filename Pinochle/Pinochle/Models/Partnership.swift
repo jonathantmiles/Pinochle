@@ -11,4 +11,5 @@ import Foundation
 struct Partnership {
     let players: [Player]
     var score: Int
+    var takenTricks: Pile
 }

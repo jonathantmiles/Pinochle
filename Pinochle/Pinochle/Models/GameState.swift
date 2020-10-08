@@ -9,7 +9,9 @@
 import Foundation
 
 struct GameState {
-    let partnerships: [Partnership]
+    var partnerships: [Partnership]
+    var players: [Player]
+    var playerWhoLeads: Int
     
     var stock: Pile
     var discardPile: Pile
