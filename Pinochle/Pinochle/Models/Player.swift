@@ -1,5 +1,5 @@
 //
-//  Deck.swift
+//  Player.swift
 //  Pinochle
 //
 //  Created by Jonathan T. Miles on 10/8/20.
@@ -8,5 +8,7 @@
 
 import Foundation
 
-typealias DeckStandard = [Int : PlayingCard]
-typealias Pile = [Int]
+struct Player {
+    
+}
+
