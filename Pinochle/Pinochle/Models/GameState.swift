@@ -20,5 +20,5 @@ struct GameState {
     
     var bid: Int
     var winningBidder: Partnership
-    var trumpSuit: String
+    var trumpSuit: Character
 }

@@ -19,6 +19,8 @@
 		F814D4B8252F6DF90004533C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4B7252F6DF90004533C /* GameState.swift */; };
 		F814D4BA252F6E720004533C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4B9252F6E720004533C /* Player.swift */; };
 		F814D4BE252F70010004533C /* Partnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4BD252F70010004533C /* Partnership.swift */; };
+		F814D4C2252F70DE0004533C /* TurnHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4C1252F70DE0004533C /* TurnHandler.swift */; };
+		F814D4C4252F73D50004533C /* Tableau.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4C3252F73D50004533C /* Tableau.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F814D4B7252F6DF90004533C /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F814D4B9252F6E720004533C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F814D4BD252F70010004533C /* Partnership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partnership.swift; sourceTree = "<group>"; };
+		F814D4C1252F70DE0004533C /* TurnHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnHandler.swift; sourceTree = "<group>"; };
+		F814D4C3252F73D50004533C /* Tableau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tableau.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			children = (
 				F814D4AE252F69940004533C /* Utilities */,
 				F814D4AD252F697C0004533C /* Models */,
+				F814D4C0252F70B70004533C /* ModelControllers */,
 				F814D499252F69000004533C /* AppDelegate.swift */,
 				F814D49B252F69000004533C /* SceneDelegate.swift */,
 				F814D49D252F69000004533C /* ViewController.swift */,
@@ -89,6 +94,7 @@
 				F814D4B7252F6DF90004533C /* GameState.swift */,
 				F814D4B9252F6E720004533C /* Player.swift */,
 				F814D4BD252F70010004533C /* Partnership.swift */,
+				F814D4C3252F73D50004533C /* Tableau.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +105,14 @@
 				F814D4AF252F69A60004533C /* DeckBuilder.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F814D4C0252F70B70004533C /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F814D4C1252F70DE0004533C /* TurnHandler.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,11 +188,13 @@
 			files = (
 				F814D4B8252F6DF90004533C /* GameState.swift in Sources */,
 				F814D4BE252F70010004533C /* Partnership.swift in Sources */,
+				F814D4C4252F73D50004533C /* Tableau.swift in Sources */,
 				F814D49E252F69000004533C /* ViewController.swift in Sources */,
 				F814D49A252F69000004533C /* AppDelegate.swift in Sources */,
 				F814D4B2252F6A4D0004533C /* Deck.swift in Sources */,
 				F814D4BA252F6E720004533C /* Player.swift in Sources */,
 				F814D4B0252F69A60004533C /* DeckBuilder.swift in Sources */,
+				F814D4C2252F70DE0004533C /* TurnHandler.swift in Sources */,
 				F814D4B6252F6A920004533C /* PlayingCard.swift in Sources */,
 				F814D49C252F69000004533C /* SceneDelegate.swift in Sources */,
 			);

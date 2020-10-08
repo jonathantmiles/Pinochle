@@ -1,5 +1,5 @@
 //
-//  Deck.swift
+//  Tableau.swift
 //  Pinochle
 //
 //  Created by Jonathan T. Miles on 10/8/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias DeckStandard = [Int : PlayingCard]
-typealias Pile = [Int]
-
-let deck = DeckBuilder().constructDeck()
+struct Tableau {
+    var tableau: Pile
+    var suitLed: Character
+}
