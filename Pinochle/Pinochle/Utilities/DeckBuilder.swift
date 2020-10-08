@@ -13,7 +13,7 @@ class DeckBuilder {
         var deckAccumulator = DeckStandard()
         
         var suitTicker: Int = 0
-        var valueTicker: Int = 9
+        var valueTicker: Int = 10
         var uniqueIndexTicker: Int = 0
         
         while uniqueIndexTicker < 48 {
@@ -33,8 +33,12 @@ class DeckBuilder {
             
             let faceActual: Bool = (valueTicker > 10 && valueTicker < 14 ? true : false)
             
-            var rankActual: String
+            let pointerActual: Bool = (valueTicker > 12 && valueTicker < 16 ? true : false)
+            
+            var rankActual: String = ""
             switch valueTicker {
+            case 10:
+                rankActual = "9"
             case 11:
                 rankActual = "J"
             case 12:
@@ -42,18 +46,20 @@ class DeckBuilder {
             case 13:
                 rankActual = "K"
             case 14:
+                rankActual = "10"
+            case 15:
                 rankActual = "A"
                 suitTicker += 1
             default:
-                rankActual = String(valueTicker)
+                break
             }
             
-            let playingCard = PlayingCard(value: valueTicker, rank: rankActual, suit: suitActual, isFace: faceActual, uniqueID: uniqueIndexTicker)
+            let playingCard = PlayingCard(value: valueTicker, rank: rankActual, suit: suitActual, isFace: faceActual, isPointer: pointerActual, uniqueID: uniqueIndexTicker)
             deckAccumulator[uniqueIndexTicker] = playingCard
             
             valueTicker += 1
-            if valueTicker > 14 { valueTicker = 9 }
-            if playingCard.report == "AD" { suitTicker = 1 }
+            if valueTicker > 15 { valueTicker = 10 }
+            if playingCard.report == "AD" { suitTicker = 0 }
             uniqueIndexTicker += 1
         }
         

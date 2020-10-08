@@ -13,6 +13,7 @@ struct PlayingCard: Hashable {
     let rank: String
     let suit: Character
     let isFace: Bool
+    let isPointer: Bool
     let uniqueID: Int
     var report: String { rank + String(suit) }
 }

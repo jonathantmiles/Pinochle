@@ -18,6 +18,11 @@ class ViewController: UIViewController {
 
     func setup() {
         let deck = DeckBuilder().constructDeck()
+        var reports: [String] = []
+        for card in 0..<deck.count {
+            reports.append(deck[card]!.report)
+        }
+        print(reports)
         print(deck.count)
     }
 
