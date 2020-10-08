@@ -13,6 +13,9 @@
 		F814D4A1252F69000004533C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F814D49F252F69000004533C /* Main.storyboard */; };
 		F814D4A3252F69020004533C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F814D4A2252F69020004533C /* Assets.xcassets */; };
 		F814D4A6252F69020004533C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F814D4A4252F69020004533C /* LaunchScreen.storyboard */; };
+		F814D4B0252F69A60004533C /* DeckBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4AF252F69A60004533C /* DeckBuilder.swift */; };
+		F814D4B2252F6A4D0004533C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4B1252F6A4D0004533C /* Deck.swift */; };
+		F814D4B6252F6A920004533C /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4B5252F6A920004533C /* PlayingCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F814D4A2252F69020004533C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F814D4A5252F69020004533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F814D4A7252F69020004533C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F814D4AF252F69A60004533C /* DeckBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilder.swift; sourceTree = "<group>"; };
+		F814D4B1252F6A4D0004533C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		F814D4B5252F6A920004533C /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		F814D498252F69000004533C /* Pinochle */ = {
 			isa = PBXGroup;
 			children = (
+				F814D4AE252F69940004533C /* Utilities */,
+				F814D4AD252F697C0004533C /* Models */,
 				F814D499252F69000004533C /* AppDelegate.swift */,
 				F814D49B252F69000004533C /* SceneDelegate.swift */,
 				F814D49D252F69000004533C /* ViewController.swift */,
@@ -65,6 +73,23 @@
 				F814D4A7252F69020004533C /* Info.plist */,
 			);
 			path = Pinochle;
+			sourceTree = "<group>";
+		};
+		F814D4AD252F697C0004533C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F814D4B1252F6A4D0004533C /* Deck.swift */,
+				F814D4B5252F6A920004533C /* PlayingCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F814D4AE252F69940004533C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F814D4AF252F69A60004533C /* DeckBuilder.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +165,9 @@
 			files = (
 				F814D49E252F69000004533C /* ViewController.swift in Sources */,
 				F814D49A252F69000004533C /* AppDelegate.swift in Sources */,
+				F814D4B2252F6A4D0004533C /* Deck.swift in Sources */,
+				F814D4B0252F69A60004533C /* DeckBuilder.swift in Sources */,
+				F814D4B6252F6A920004533C /* PlayingCard.swift in Sources */,
 				F814D49C252F69000004533C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
