@@ -66,13 +66,41 @@ class HandHandler {
         }
         
         return false
-     }
+    }
+    
+    func canBeat(inSuit suit: Character, cardID: Int, fromSortedHand hand: SortedPile) -> Bool {
+        let suitIndex = suitsSorted.firstIndex(of:deck[cardID]!.suit)!
+        if hand[suitIndex].isEmpty {
+            return false
+        } else if deck[hand[suitIndex].first!]!.value > deck[cardID]!.value {
+            return true
+        } else {
+            return false
+        }
+    }
     
     func canFollowSuit(cardID: Int, fromSortedHand hand: SortedPile) -> Bool {
         let suitIndex = suitsSorted.firstIndex(of:deck[cardID]!.suit)!
         if hand[suitIndex].isEmpty { return false }
         return true
     }
+    
+    func hasPointer(inSuit suit: Character, inSortedHand hand: SortedPile) -> Bool {
+        let suitIndex = suitsSorted.firstIndex(of: suit)!
+        if hand[suitIndex].isEmpty { return false }
+        if deck[hand[suitIndex].first!]!.isPointer { return true }
+        return false
+    }
+    
+    func lowestPointer(inSortedHand hand: SortedPile, inSuit suit: Character) -> Int? {
+        let suitIndex = suitsSorted.firstIndex(of: suit)!
+        var selectedCard = hand[suitIndex].first
+        for cardID in hand[suitIndex] where deck[cardID]!.isPointer {
+            selectedCard = cardID
+        }
+        return selectedCard
+    }
+    
     // beat with highest card in suit; if no cards in suit, trump low; if no cards in trump, play off suit
     func takeTrickIfPossible(fromHand hand: SortedPile, towardHighestCard cardID: Int, whereTrump trump: Character) -> Int {
         let suitIndex = suitsSorted.firstIndex(of:deck[cardID]!.suit)!
@@ -109,5 +137,26 @@ class HandHandler {
             return hand[suitWithLeastCardsHeld].last!
         }
     }
+    ///Pass in the leading card, which is a pointer card, and played by a partner (these paramaters must be assured by external logic). Returns the ID of a pointer card lower or equal in value to the card passed in. Otherwise takeTrickIfPossible is called.
+    func supportWithPointer(fromSortedHand hand: SortedPile, towardPlayedCard cardID: Int, whereTrump trump: Character) -> Int {
+        let suit = deck[cardID]!.suit
+        let lowestPointerInHand = lowestPointer(inSortedHand: hand, inSuit: suit)
+        if lowestPointerInHand != nil {
+            return lowestPointerInHand!
+        } else {
+            return takeTrickIfPossible(fromHand: hand, towardHighestCard: cardID, whereTrump: trump)
+        }
+    }
+    
+    ///Capture using lowest eligible pointer; to be called primarily if last in turn order and canBeat. Requires new supporting function for lowest card to beat cardID and to check if any pointer held can beat that CardID
+//    func captureWithPointer(fromSortedHand hand: SortedPile, towardHighestCard cardID: Int, whereTrump trump: Character) -> Int {
+//        let suit = deck[cardID]!.suit
+//        if canBeat(inSuit: suit, cardID: cardID, fromSortedHand: hand) {
+//            let lowestPointerInHand = lowestPointer(inSortedHand: hand, inSuit: suit)
+//            return 48
+//        } else {
+//            return takeTrickIfPossible(fromHand: hand, towardHighestCard: cardID, whereTrump: trump)
+//        }
+//    }
     
 }
