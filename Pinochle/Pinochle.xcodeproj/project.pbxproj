@@ -23,6 +23,7 @@
 		F814D4C4252F73D50004533C /* Tableau.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4C3252F73D50004533C /* Tableau.swift */; };
 		F814D4C7252F967D0004533C /* TrickLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4C6252F967D0004533C /* TrickLogic.swift */; };
 		F814D4C9252F99590004533C /* GameLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4C8252F99590004533C /* GameLoop.swift */; };
+		F814D4CB2534C4E40004533C /* HandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814D4CA2534C4E40004533C /* HandHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F814D4C3252F73D50004533C /* Tableau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tableau.swift; sourceTree = "<group>"; };
 		F814D4C6252F967D0004533C /* TrickLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickLogic.swift; sourceTree = "<group>"; };
 		F814D4C8252F99590004533C /* GameLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoop.swift; sourceTree = "<group>"; };
+		F814D4CA2534C4E40004533C /* HandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				F814D4C1252F70DE0004533C /* TurnHandler.swift */,
 				F814D4C8252F99590004533C /* GameLoop.swift */,
+				F814D4CA2534C4E40004533C /* HandHandler.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F814D4C9252F99590004533C /* GameLoop.swift in Sources */,
+				F814D4CB2534C4E40004533C /* HandHandler.swift in Sources */,
 				F814D4B8252F6DF90004533C /* GameState.swift in Sources */,
 				F814D4BE252F70010004533C /* Partnership.swift in Sources */,
 				F814D4C4252F73D50004533C /* Tableau.swift in Sources */,

@@ -10,5 +10,7 @@ import Foundation
 
 typealias DeckStandard = [Int : PlayingCard]
 typealias Pile = [Int]
+typealias SortedPile = [Pile]
 
 let deck = DeckBuilder().constructDeck()
+let suitsSorted: [Character] = ["S", "D", "C", "H"]
