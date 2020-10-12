@@ -8,6 +8,11 @@
 
 import Foundation
 
+var trickHistory: SortedPile = Array.init(repeating: Array.init(repeating: Int(), count: 6), count: 12)
+
+// each Pile here will have the Player Index of the leading player, the four cardIDs in order of play, and the playerID of the winning card
+// index 0 is the first turn, and index 11 is the last turn
+// trickHistory[i][5] == trickHistory[i+1][0] (winner leads next trick)
 
 // take a tableau and own player number, plus index of player who led
 // check for highest card played (which player index)
