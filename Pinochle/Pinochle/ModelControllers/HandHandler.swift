@@ -78,22 +78,36 @@ class HandHandler {
         let suitIndex = suitsSorted.firstIndex(of:deck[cardID]!.suit)!
         let trumpIndex = suitsSorted.firstIndex(of: trump)!
         
-        // if canBeat
+        let beatable = canBeat(cardID: cardID, fromSortedHand: hand, whereTrump: trump)
+        let followable = canFollowSuit(cardID: cardID, fromSortedHand: hand)
         
-        //play offsuit
-        if !canBeat(cardID: cardID, fromSortedHand: hand, whereTrump: trump) && !canFollowSuit(cardID: cardID, fromSortedHand: hand){
+        switch (beatable, followable) {
+        case (true, true):
+            //play highest card in suit led
+            return hand[suitIndex].first!
+        case (true, false):
+            // play lowest trump
+            return hand[trumpIndex].last!
+        case (false, true):
+            // play lowest card in suit led
+            return hand[suitIndex].last!
+        case (false, false):
+            //play offsuit in suit with least cards held
             var offSuitCandidates: Set<Int> = [0, 1, 2, 3]
             offSuitCandidates.remove(trumpIndex)
             offSuitCandidates.remove(suitIndex)
+            var suitWithLeastCardsHeld = offSuitCandidates.first!
             
             for suit in offSuitCandidates {
                 if !hand[suit].isEmpty {
-                    return hand[suit].last!
+                    if suitWithLeastCardsHeld > hand[suit].count {
+                        suitWithLeastCardsHeld = suit
+                        
+                    }
                 }
             }
+            return hand[suitWithLeastCardsHeld].last!
         }
-        
-        return 52 //hand[indexOfSuit].first
     }
     
 }
